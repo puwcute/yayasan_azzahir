@@ -1,5 +1,5 @@
 [build]
-build-command = "composer install --no-dev --optimize-autoloader && php artisan key:generate --force && php artisan storage:link"
+build-command = "composer install --no-dev --optimize-autoloader && php artisan key:generate --force && php artisan storage:link && php artisan migrate --force && php artisan db:seed --force"
 
 [deploy]
 restart-policy-type = "on-failure"
