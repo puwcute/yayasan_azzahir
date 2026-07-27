@@ -1,8 +1,5 @@
 [build]
-build-command = "composer install --no-dev --optimize-autoloader"
-start-command = "php artisan storage:link && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=$PORT"
+build-command = "composer install --no-dev --optimize-autoloader && php artisan storage:link"
 
 [deploy]
 restart-policy-type = "on-failure"
-healthcheck-path = "/"
-healthcheck-timeout-seconds = 30
